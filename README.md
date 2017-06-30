@@ -1,3 +1,2 @@
-# OnlineShop
-----
-this is a project like TaoBao
+# Online Shop
+---
