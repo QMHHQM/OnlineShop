@@ -2,7 +2,7 @@
   "name": "online-shop",
   "description": "a simple online shop",
   "version": "1.0.0",
-  "author": "gurui <grapes4@163.com>",
+  "author": "front-end:gurui(1610122600) <grapes4@163.com>",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
