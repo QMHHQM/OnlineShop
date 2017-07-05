@@ -2,6 +2,7 @@ import App from '../App'
 
 const home = r => require.ensure([], () => r(require('../page/home/home')), 'home')
 const login = r => require.ensure([], () => r(require('../page/login/login')), 'login')
+const test = r => require.ensure([], () => r(require('../components/header/header')), 'test')
 
 export default [         
     //地址为空时跳转home页面
@@ -18,5 +19,10 @@ export default [
     {
         path: '/login',
         component: login
+    },
+    //test
+    {
+        path: '/test',
+        component: test
     }
 ]

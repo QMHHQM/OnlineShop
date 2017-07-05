@@ -23,10 +23,6 @@
                         <!--<button type="button" class="btn" ng-show="processed" ng-bind="'login.btn.loading'|translate"></button>-->
                     </div>
                 </div>
-                <!--<div class="loginOnErr" v-show="loginOnErr">
-                    <span class="fa fa-exclamation-triangle"></span>
-                    <span ng-bind="loginOnErrInfo | translate" class="ng-binding">用户名或密码不能为空</span>
-                </div>-->
                 <div class="loginOnErr" v-show="loginOnErr">
                     <span class="fa fa-exclamation-triangle"></span>
                     <span>用户名或密码不能为空</span>
@@ -44,24 +40,29 @@ export default {
         return {
             userId: null,           //用户ID
             password: null,          //用户密码
-            loginOnErr: false
         }
     },
     methods: {
         //发送登录信息
-            async accountLogin(){
-                if (!this.userId) {
-                    this.showAlert = true;
-                    this.alertText = '请输入手机号/邮箱/用户名';
-                    return
-                }else if(!this.password){
-                    this.showAlert = true;
-                    this.alertText = '请输入密码';
-                    return
-                }
+        async accountLogin(){
+            if (!this.loginOnErr) {
                 //用户名登录
                 this.userInfo = await userLogin(this.userId, this.password);
+                // if (!this.userInfo.user_id) {
+                //     this.showAlert = true;
+                //     this.alertText = this.userInfo.message;
+                //     if (!this.loginWay) this.getCaptchaCode();
+                // } else {
+                //     this.RECORD_USERINFO(this.userInfo);
+                //     this.$router.go(-1);
+                // }
             }
+        }
+    },
+    computed: {
+        loginOnErr: function() {
+            return !userId || !password
+        }
     }
 }
 </script>
