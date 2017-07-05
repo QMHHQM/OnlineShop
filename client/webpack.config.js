@@ -25,7 +25,11 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
-      }
+      },
+      {
+        test: /\.(woff|woff2|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?|(woff|woff2|ttf|eot)$/,
+        loader: 'file-loader?name=./fonts/[name].[ext]'
+      },
     ]
   },
   resolve: {
@@ -33,7 +37,8 @@ module.exports = {
     extensions: ['.js', '.vue'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
-    }
+    },
+    extensions: ['.js', '.vue']
   },
   devServer: {
     historyApiFallback: true,
