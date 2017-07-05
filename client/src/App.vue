@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    {{ hello }}
+    <router-view></router-view>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
     name: 'app',
     data () {
       return {
-        hello: "hi"
+        
       }
     }
   }
