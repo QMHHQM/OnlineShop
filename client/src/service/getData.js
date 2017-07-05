@@ -19,7 +19,7 @@ export const regist = (userId, userName, password, realName, tel, address, zip, 
  * 普通用户登录
  */
 
-export const userLogin = (userName, password) => fetch('user/login.do', {
+export const userLogin = (userName, password) => fetch('/user/login.do', {
     userName,
     password
 })
@@ -28,8 +28,7 @@ export const userLogin = (userName, password) => fetch('user/login.do', {
  * 管理员登录
  */
 
-export const adminLogin = (userName, password) => fetch('admin/login.do', {
+export const adminLogin = (userName, password) => fetch('/admin/login.do', {
     userName,
     password
 })
-
