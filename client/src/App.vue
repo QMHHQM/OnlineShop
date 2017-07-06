@@ -16,9 +16,9 @@
 </script>
 
 <style lang="scss">
-    @import './style/common';
     @import './lib/bootstrap';
     @import './lib/font-awesome/css/font-awesome.min.css';
+    @import './style/common';
     #app {
         height: 100%;
     }
