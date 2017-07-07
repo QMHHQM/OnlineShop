@@ -1,6 +1,6 @@
 <template>
-    <div data-name="cart" class="toolbar-panel tbar-panel-cart toolbar-animate-in">
-        <h3 class="tbar-panel-header J-panel-header">
+    <div data-name="cart" class="toolbar-panel tbar-panel-cart">
+        <h3 class="tbar-panel-header">
             <a href="//cart.jd.com/cart.action?r=0.9100038860775763" target="_blank" class="title">
                 <i></i>
                 <em class="title">购物车</em>
@@ -8,13 +8,29 @@
             <span class="close-panel J-close"></span>
         </h3>
         <div class="tbar-panel-main">
-            <div class="tbar-panel-content" style="height: 357px;">
-                <div class="tbar-tipbox2">
+            <div class="tbar-panel-content">
+                <div class="tbar-tipbox2" v-if="hasPicked" style="height: 357px;">
                     <div class="tip-inner">
                         <i class="i-face-fd tip-face"></i>
                         <div class="tip-text"> 购物车空空的，赶快去挑选心仪的商品吧~
                             <br>
-                            <a href="//www.jd.com/">去首页看看</a>
+                            <a href="#">去首页看看</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tbar-cart-list">
+                    <div class="tbar-cart-item" v-for="(item, index) in cartList">
+                        <div class="jtc-item-goods">
+                            <span class="p-img">
+                                <a :href="item.src" target="_blank">
+                                    <img :src="item.img" width="50" height="50" :alt="item.title"> </a>
+                            </span>
+                            <div class="p-name">
+                                <a :href="item.src" :title="item.title" target="_blank">{{item.title}}</a>
+                            </div>
+                            <div class="p-price">
+                                <strong>¥{{item.price}}</strong>×{{item.count}}</div>
+                            <a href="#none" class="p-del" data-cid="4155894|199025630|13">删除</a>
                         </div>
                     </div>
                 </div>
@@ -23,11 +39,11 @@
         <div class="tbar-panel-footer">
             <div class="tbar-checkout">
                 <div class="jtc-number">
-                    <strong class="J-count">0</strong>件商品</div>
+                    <strong>{{totalCount}}</strong>件商品</div>
                 <div class="jtc-sum">共计：
-                    <strong class="J-total">￥0.00</strong>
+                    <strong>￥{{totalPrice}}</strong>
                 </div>
-                <a class="jtc-btn J-btn" href="//cart.jd.com/cart.action?r=0.5387784492421797" target="_blank" clstag="h|keycount|cebianlan_h_cart|gotocart">去购物车结算</a>
+                <a class="jtc-btn J-btn" href="//cart.jd.com/cart.action?r=0.5387784492421797" target="_blank" clstag="h|keycount|cebianlan_h_cart|gotocart">结算</a>
             </div>
         </div>
     </div>
@@ -36,11 +52,62 @@
 export default {
     data() {
         return {
+            hasPicked: false,
+            cartList: [
+                {
+                    src: "//item.jd.com/4155894.html",
+                    img: "//img14.360buyimg.com/n5/jfs/t4642/55/3978388666/72688/c8b2dcf/59080db2N7ae9168e.jpg",
+                    title: "罗技（Logitech）G102 游戏鼠标 6000DPI RGB鼠标 黑色",
+                    price: "139.00",
+                    count: "1"
+                },
+                {
+                    src: "//item.jd.com/4155894.html",
+                    img: "//img14.360buyimg.com/n5/jfs/t4642/55/3978388666/72688/c8b2dcf/59080db2N7ae9168e.jpg",
+                    title: "罗技（Logitech）G102 游戏鼠标 6000DPI RGB鼠标 黑色",
+                    price: "139.00",
+                    count: "1"
+                },
+                {
+                    src: "//item.jd.com/4155894.html",
+                    img: "//img14.360buyimg.com/n5/jfs/t4642/55/3978388666/72688/c8b2dcf/59080db2N7ae9168e.jpg",
+                    title: "罗技（Logitech）G102 游戏鼠标 6000DPI RGB鼠标 黑色",
+                    price: "139.00",
+                    count: "1"
+                },
+                {
+                    src: "//item.jd.com/4155894.html",
+                    img: "//img14.360buyimg.com/n5/jfs/t4642/55/3978388666/72688/c8b2dcf/59080db2N7ae9168e.jpg",
+                    title: "罗技（Logitech）G102 游戏鼠标 6000DPI RGB鼠标 黑色",
+                    price: "139.00",
+                    count: "1"
+                },
+                {
+                    src: "//item.jd.com/4155894.html",
+                    img: "//img14.360buyimg.com/n5/jfs/t4642/55/3978388666/72688/c8b2dcf/59080db2N7ae9168e.jpg",
+                    title: "罗技（Logitech）G102 游戏鼠标 6000DPI RGB鼠标 黑色",
+                    price: "139.00",
+                    count: "1"
+                }
+            ]
 
         }
     },
-    components: {
-        
+    computed: {
+        totalCount:function() {
+            let count = 0;
+            for(let i of this.cartList) {
+                count += parseInt(i.count)
+            }
+            return count;
+        },
+        totalPrice:function() {
+            let price = 0;
+            for(let i of this.cartList) {
+                price += Number(i.price) * parseInt(i.count)
+            }
+            return price.toFixed(2);
+        }
     }
 }
 </script>
@@ -53,7 +120,10 @@ export default {
     right: 0;
     top: 0;
     z-index: 2;
-}  
+}
+.toolbar-panel a {
+    text-decoration: none;
+}
 .tbar-panel-header {
     position: relative;
     width: 270px;
@@ -112,6 +182,7 @@ export default {
     overflow-y: auto;
     overflow-x: hidden;
     position: relative;
+    height: 100%;
 }
 .tbar-panel-content .tbar-tipbox2 {
     width: 270px;
@@ -131,6 +202,65 @@ export default {
 }
 .tbar-tipbox2 .tip-text a {
     color: #c81623;
+}
+.tbar-cart-list {
+    width: 100%;
+}
+.tbar-cart-item {
+    padding: 0 5px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+.jtc-item-goods {
+    padding: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+.jtc-item-goods .p-img {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ddd;
+    padding: 0;
+    margin-right: 5px;
+}
+.jtc-item-goods .p-img img {
+    width: 50px;
+    height: 50px;
+}
+.jtc-item-goods .p-name {
+    height: 32px;
+    line-height: 16px;
+    margin-bottom: 4px;
+    overflow: hidden;
+}
+.jtc-item-goods .p-name a {
+    color: #333;
+}
+.jtc-item-goods .p-price {
+    height: 16px;
+    padding-right: 65px;
+    overflow: hidden;
+    font: 12px/16px verdana;
+    color: #666;
+}
+.jtc-item-goods .p-price strong {
+    color: #c81623;
+    font-weight: 400;
+}
+.jtc-item-goods .p-del {
+    position: absolute;
+    right: 10px;
+    top: 52px;
+    width: 35px;
+    height: 16px;
+    line-height: 16px;
+    color: #005aa0;
+    text-align: right;
+    display: none;
+}
+.jtc-item-goods:hover .p-del {
+    display: block;
 }
 .i-face-fd {
     width: 113px;

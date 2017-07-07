@@ -11,8 +11,8 @@
             </div>
         </div>
         <div class="hotwords">
-            <a target="_blank" href="#">京东之家</a>
-            <a target="_blank" href="#">京东专卖店</a>
+            <a target="_blank" href="#">手机</a>
+            <a target="_blank" href="#">袜子</a>
             <a target="_blank" href="#">平板</a>
             <a target="_blank" href="#">电脑</a>
             <a target="_blank" href="#">ipad</a>
@@ -73,7 +73,7 @@
         padding: 4px;
         margin-bottom: 4px;
         border-width: 2px 0 2px 2px;
-        border-color: #B61D1D;
+        border-color: #003664;
         border-style: solid;
         outline: 0;
         font-size: 14px;
@@ -83,7 +83,7 @@
         float: left;
         width: 82px;
         height: 36px;
-        background: #B61D1D;
+        background: #003664;
         border: none;
         line-height: 1;
         color: #fff;

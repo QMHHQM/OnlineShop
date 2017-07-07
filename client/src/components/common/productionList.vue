@@ -174,7 +174,7 @@ export default {
 <style scoped>
     .production-list {
         width: 1210px;
-        margin: 0 auto;
+        margin: 0 auto 30px;
     }
     .content {
         width: 1210px;
