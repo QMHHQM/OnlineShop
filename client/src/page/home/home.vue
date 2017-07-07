@@ -2,7 +2,8 @@
     <div>
         <shortcut></shortcut>
         <head-top></head-top>
-        <production-list></production-list>
+        <nav-title></nav-title>
+        <router-view></router-view>
         <buy-cart></buy-cart>
         <foot-guide></foot-guide>
     </div>
@@ -10,8 +11,8 @@
 <script>
 import headTop from '../../components/header/header'
 import shortcut from '../../components/header/shortcut'
+import navTitle from '../../components/header/nav'
 import footGuide from '../../components/footer/footer'
-import productionList from '../../components/common/productionList'
 import buyCart from '../../components/common/buyCart'
 export default {
     name: 'home',
@@ -23,9 +24,9 @@ export default {
     components: {
         headTop,
         footGuide,
-        productionList,
         buyCart,
-        shortcut
+        shortcut,
+        navTitle
     }
 }
 </script>

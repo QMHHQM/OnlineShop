@@ -2,7 +2,7 @@
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-sm-12 footer-info">
+                <div class="col-md-4 col-sm-12 footer-info">
                     <div class="logo-wrapper">
                         <img class="logo" src="../../images/team.png">
                         <span class="name">OnlineShop制作团队</span>
@@ -13,16 +13,16 @@
                             <a href="#" target="_blank">AlloyTeam</a>. All Rights Reserved.</div>
                     </div>
                 </div>
-                <div class="col-md-3 footer-links">
-                    <h4>前端开发团队</h4>
+                <div class="col-md-4 footer-links">
+                    <h4>前端开发组(姓名-学号-github账号)</h4>
                     <div class="links">
-                        <a href="#" class="link-item">顾睿</a>
+                        <a href="#" class="link-item">顾睿-1610122600-grapes4/gurui</a>
                         <a href="#" class="link-item">王龚龙</a>
                         <a href="#" class="link-item">陈昱先</a>
                     </div>
                 </div>
-                <div class="col-md-3 footer-links">
-                    <h4>后端开发团队</h4>
+                <div class="col-md-4 footer-links">
+                    <h4>后端开发组(姓名-学号-github账号)</h4>
                     <div class="links">
                         <a href="#" class="link-item">何凡</a>
                         <a href="#" class="link-item">贾音</a> 

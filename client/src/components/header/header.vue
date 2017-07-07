@@ -1,12 +1,12 @@
 <template>
     <div class="w">
         <div class="logo">
-            <a href="#" class="logo-img">OnlineShop</a>
+            <router-link to="/home"><img src="../../images/logo.png" class="logo-img"></router-link>
         </div>
         <div class="search">
             <div class="form">
-                <input type="text" onkeydown="javascript:if(event.keyCode==13) search('key');" autocomplete="off" id="key" accesskey="s" class="text" clstag="shangpin|keycount|topitemnormal|b02">
-                <button onclick="search('key');return false;" class="button cw-icon" clstag="shangpin|keycount|topitemnormal|b03">
+                <input type="text"  autocomplete="off" id="key" accesskey="s" class="text">
+                <button class="button cw-icon">
                     <i></i>搜索</button>
             </div>
         </div>
@@ -48,9 +48,6 @@
         display: block;
         width: 270px;
         height: 60px;
-        background: url("../../images/logo.png") no-repeat 0 0;
-        background-size:270px 60px;
-        text-indent: -20000px;
     }
     .search, .search .form {
         width: auto;

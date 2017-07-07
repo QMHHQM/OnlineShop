@@ -1,26 +1,25 @@
 <template>
     <div class="production-list"> 
         <div class="content">
-            <h3 class="mt">商品列表</h3>
             <div class="tab-cont">
                 <ul v-for="(groupItem, groupIndex) in tempList" class="p-group">
                     <ul class="p-list clearfix">
                         <li class="p-item" v-for="(item, index) in groupItem">
                             <div class="p-img">
-                                <a :href="item.src" target="_blank" :title="item.title">
+                                <router-link to="/home/production-info" :href="item.src" :title="item.title">
                                     <img width="180" height="180" :alt="item.title" :src="item.img">
-                                </a>
+                                </router-link>
                             </div>
                             <div class="p-name">
-                                <a :href="item.src" target="_blank" :title="item.title">
+                                <router-link to="/home/production-info" :href="item.src":title="item.title">
                                     {{ item.title }}
-                                </a>
+                                </router-link>
                             </div>
                             <div class="p-price">¥{{item.price}}</div>
                         </li>
                     </ul>
                     <hr>
-                </ul>   
+                </ul>
             </div>
         </div>
     </div>
@@ -174,19 +173,15 @@ export default {
 <style scoped>
     .production-list {
         width: 1210px;
-        margin: 0 auto 30px;
+        margin: 30px auto;
     }
     .content {
         width: 1210px;
         margin: 0 auto;
     }
-    .mt {
-        padding-bottom: 20px;
-        font-size: 20px;
-        line-height: 20px;
-    }
     .tab-cont {
         border: 1px solid #ddd;
+        margin-top: 20px;
     }
     .tab-cont .p-group hr {
         height: 1px;

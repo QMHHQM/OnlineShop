@@ -4,7 +4,7 @@
             <ul class="fr">
                 <li class="dt"><a target="_blank" href="#">你好，何凡</a></li>
                 <li class="spacer"></li>
-                <li class="dt"><a target="_blank" href="#">个人信息</a></li>
+                <li class="dt"><router-link to="/home/user-info">个人信息</router-link></li>
                 <li class="spacer"></li>
                 <li class="dt"><a target="_blank" href="#">我的订单</a></li>
                 <li class="spacer"></li>
