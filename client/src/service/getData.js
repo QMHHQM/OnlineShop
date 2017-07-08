@@ -32,3 +32,26 @@ export const adminLogin = (userName, password) => fetch('/admin/login.do', {
     userName,
     password
 })
+
+/**
+ * 加入购物车
+ */
+
+export const addToCart = (proId, count) => fetch('/user/add-to-cart', {
+    proId,
+    count
+})
+
+/**
+ * 删除购物车某件商品
+ */
+export const deleteCartPro = (proId) => fetch('/user/delete-cart-pro', {
+    proId
+})
+
+/**
+ * 购买购物车商品
+ */
+export const buyCart = (productionList) => fetch('/user/buy-cart', {
+    productionList
+})

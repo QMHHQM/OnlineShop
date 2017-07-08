@@ -19,6 +19,7 @@
                         <a href="#" class="link-item">顾睿-1610122600-grapes4/gurui</a>
                         <a href="#" class="link-item">王龚龙</a>
                         <a href="#" class="link-item">陈昱先</a>
+                        <a href="#" class="link-item">王舒洋</a> 
                     </div>
                 </div>
                 <div class="col-md-4 footer-links">
@@ -27,8 +28,7 @@
                         <a href="#" class="link-item">何凡</a>
                         <a href="#" class="link-item">贾音</a> 
                         <a href="#" class="link-item">刘超</a>
-                        <a href="#" class="link-item">王宁</a>
-                        <a href="#" class="link-item">王舒洋</a>                             
+                        <a href="#" class="link-item">王宁</a>                        
                     </div>
                 </div>
             </div>

@@ -1,11 +1,11 @@
 <template>
-    <div data-name="cart" class="toolbar-panel tbar-panel-cart">
+    <div class="toolbar-panel tbar-panel-cart">
         <h3 class="tbar-panel-header">
-            <a href="//cart.jd.com/cart.action?r=0.9100038860775763" target="_blank" class="title">
-                <i></i>
+            <a target="_blank" class="title">
+                <i class="fa fa-shopping-cart"></i>
                 <em class="title">购物车</em>
             </a>
-            <span class="close-panel J-close"></span>
+            <span class="close-panel"></span>
         </h3>
         <div class="tbar-panel-main">
             <div class="tbar-panel-content">
@@ -43,71 +43,43 @@
                 <div class="jtc-sum">共计：
                     <strong>￥{{totalPrice}}</strong>
                 </div>
-                <a class="jtc-btn J-btn" href="//cart.jd.com/cart.action?r=0.5387784492421797" target="_blank" clstag="h|keycount|cebianlan_h_cart|gotocart">结算</a>
+                <a class="jtc-btn" href="//cart.jd.com/cart.action?r=0.5387784492421797" target="_blank" clstag="h|keycount|cebianlan_h_cart|gotocart">结算</a>
             </div>
         </div>
     </div>
 </template>
 <script>
+import {mapState, mapMutations} from 'vuex'
 export default {
     data() {
         return {
-            hasPicked: false,
-            cartList: [
-                {
-                    src: "//item.jd.com/4155894.html",
-                    img: "//img14.360buyimg.com/n5/jfs/t4642/55/3978388666/72688/c8b2dcf/59080db2N7ae9168e.jpg",
-                    title: "罗技（Logitech）G102 游戏鼠标 6000DPI RGB鼠标 黑色",
-                    price: "139.00",
-                    count: "1"
-                },
-                {
-                    src: "//item.jd.com/4155894.html",
-                    img: "//img14.360buyimg.com/n5/jfs/t4642/55/3978388666/72688/c8b2dcf/59080db2N7ae9168e.jpg",
-                    title: "罗技（Logitech）G102 游戏鼠标 6000DPI RGB鼠标 黑色",
-                    price: "139.00",
-                    count: "1"
-                },
-                {
-                    src: "//item.jd.com/4155894.html",
-                    img: "//img14.360buyimg.com/n5/jfs/t4642/55/3978388666/72688/c8b2dcf/59080db2N7ae9168e.jpg",
-                    title: "罗技（Logitech）G102 游戏鼠标 6000DPI RGB鼠标 黑色",
-                    price: "139.00",
-                    count: "1"
-                },
-                {
-                    src: "//item.jd.com/4155894.html",
-                    img: "//img14.360buyimg.com/n5/jfs/t4642/55/3978388666/72688/c8b2dcf/59080db2N7ae9168e.jpg",
-                    title: "罗技（Logitech）G102 游戏鼠标 6000DPI RGB鼠标 黑色",
-                    price: "139.00",
-                    count: "1"
-                },
-                {
-                    src: "//item.jd.com/4155894.html",
-                    img: "//img14.360buyimg.com/n5/jfs/t4642/55/3978388666/72688/c8b2dcf/59080db2N7ae9168e.jpg",
-                    title: "罗技（Logitech）G102 游戏鼠标 6000DPI RGB鼠标 黑色",
-                    price: "139.00",
-                    count: "1"
-                }
-            ]
-
+            hasPicked: false
         }
     },
     computed: {
-        totalCount:function() {
+        totalCount() {
             let count = 0;
             for(let i of this.cartList) {
                 count += parseInt(i.count)
             }
             return count;
         },
-        totalPrice:function() {
+        totalPrice() {
             let price = 0;
             for(let i of this.cartList) {
                 price += Number(i.price) * parseInt(i.count)
             }
             return price.toFixed(2);
-        }
+        },
+        ...mapState([
+            'cartList'
+        ]),
+    },
+    methods: {
+        ...mapMutations([
+            'ADD_CART','REDUCE_CART',
+        ]),
+        
     }
 }
 </script>
@@ -168,18 +140,13 @@ export default {
     -moz-transition: transform .2s ease-out 0s;
     transition: transform .2s ease-out 0s;
 }
-.tbar-panel-header .close-panel, .tbar-panel-header i, .toolbar-tab .tab-ico, .toolbar-tab .tab-tip, .toolbar-tabs .tabs-tip .ico {
-    display: inline-block;
-    background-image: url(//static.360buyimg.com/devfe/toolbar/1.0.0/css/i/toolbars.png);
-    background-repeat: no-repeat;
-}
 .tbar-panel-main {
     position: relative;
     height: calc(100% - 90px);
 }
 .tbar-panel-content {
     width: 270px;
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
     position: relative;
     height: 100%;

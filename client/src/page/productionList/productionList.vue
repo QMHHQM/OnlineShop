@@ -2,7 +2,7 @@
     <div class="production-list"> 
         <div class="content">
             <div class="tab-cont">
-                <ul v-for="(groupItem, groupIndex) in tempList" class="p-group">
+                <ul v-for="(groupItem, groupIndex) in productionList" class="p-group">
                     <ul class="p-list clearfix">
                         <li class="p-item" v-for="(item, index) in groupItem">
                             <div class="p-img">
@@ -29,142 +29,15 @@ import _ from 'lodash'
 export default {
     data() {
         return {
-            productList: [
-                {
-                    key: "1",
-                    title: "360手机 N5 全网通 6GB+32GB 流光金 移动联通电信4G手机 双卡双待",
-                    img: "//img10.360buyimg.com/n7/jfs/t3127/302/6759817728/310883/d8845fa8/58ad06d4N48f50019.jpg",
-                    src: "//item.jd.com/3857525.html",
-                    price: "1299"
-                },
-                {
-                    key: "2",
-                    title: "360手机 N5 全网通 6GB+32GB 流光金 移动联通电信4G手机 双卡双待",
-                    img: "//img10.360buyimg.com/n7/jfs/t3127/302/6759817728/310883/d8845fa8/58ad06d4N48f50019.jpg",
-                    src: "//item.jd.com/3857525.html",
-                    price: "1299"
-                },
-                {
-                    key: "3",
-                    title: "360手机 N5 全网通 6GB+32GB 流光金 移动联通电信4G手机 双卡双待",
-                    img: "//img10.360buyimg.com/n7/jfs/t3127/302/6759817728/310883/d8845fa8/58ad06d4N48f50019.jpg",
-                    src: "//item.jd.com/3857525.html",
-                    price: "1299"
-                },
-                {
-                    key: "4",
-                    title: "360手机 N5 全网通 6GB+32GB 流光金 移动联通电信4G手机 双卡双待",
-                    img: "//img10.360buyimg.com/n7/jfs/t3127/302/6759817728/310883/d8845fa8/58ad06d4N48f50019.jpg",
-                    src: "//item.jd.com/3857525.html",
-                    price: "1299"
-                },
-                {
-                    key: "5",
-                    title: "360手机 N5 全网通 6GB+32GB 流光金 移动联通电信4G手机 双卡双待",
-                    img: "//img10.360buyimg.com/n7/jfs/t3127/302/6759817728/310883/d8845fa8/58ad06d4N48f50019.jpg",
-                    src: "//item.jd.com/3857525.html",
-                    price: "1299"
-                },
-                {
-                    key: "6",
-                    title: "360手机 N5 全网通 6GB+32GB 流光金 移动联通电信4G手机 双卡双待",
-                    img: "//img10.360buyimg.com/n7/jfs/t3127/302/6759817728/310883/d8845fa8/58ad06d4N48f50019.jpg",
-                    src: "//item.jd.com/3857525.html",
-                    price: "1299"
-                },
-                {
-                    key: "1",
-                    title: "360手机 N5 全网通 6GB+32GB 流光金 移动联通电信4G手机 双卡双待",
-                    img: "//img10.360buyimg.com/n7/jfs/t3127/302/6759817728/310883/d8845fa8/58ad06d4N48f50019.jpg",
-                    src: "//item.jd.com/3857525.html",
-                    price: "1299"
-                },
-                {
-                    key: "2",
-                    title: "360手机 N5 全网通 6GB+32GB 流光金 移动联通电信4G手机 双卡双待",
-                    img: "//img10.360buyimg.com/n7/jfs/t3127/302/6759817728/310883/d8845fa8/58ad06d4N48f50019.jpg",
-                    src: "//item.jd.com/3857525.html",
-                    price: "1299"
-                },
-                {
-                    key: "3",
-                    title: "360手机 N5 全网通 6GB+32GB 流光金 移动联通电信4G手机 双卡双待",
-                    img: "//img10.360buyimg.com/n7/jfs/t3127/302/6759817728/310883/d8845fa8/58ad06d4N48f50019.jpg",
-                    src: "//item.jd.com/3857525.html",
-                    price: "1299"
-                },
-                {
-                    key: "4",
-                    title: "360手机 N5 全网通 6GB+32GB 流光金 移动联通电信4G手机 双卡双待",
-                    img: "//img10.360buyimg.com/n7/jfs/t3127/302/6759817728/310883/d8845fa8/58ad06d4N48f50019.jpg",
-                    src: "//item.jd.com/3857525.html",
-                    price: "1299"
-                },
-                {
-                    key: "5",
-                    title: "360手机 N5 全网通 6GB+32GB 流光金 移动联通电信4G手机 双卡双待",
-                    img: "//img10.360buyimg.com/n7/jfs/t3127/302/6759817728/310883/d8845fa8/58ad06d4N48f50019.jpg",
-                    src: "//item.jd.com/3857525.html",
-                    price: "1299"
-                },
-                {
-                    key: "6",
-                    title: "360手机 N5 全网通 6GB+32GB 流光金 移动联通电信4G手机 双卡双待",
-                    img: "//img10.360buyimg.com/n7/jfs/t3127/302/6759817728/310883/d8845fa8/58ad06d4N48f50019.jpg",
-                    src: "//item.jd.com/3857525.html",
-                    price: "1299"
-                },
-                {
-                    key: "1",
-                    title: "360手机 N5 全网通 6GB+32GB 流光金 移动联通电信4G手机 双卡双待",
-                    img: "//img10.360buyimg.com/n7/jfs/t3127/302/6759817728/310883/d8845fa8/58ad06d4N48f50019.jpg",
-                    src: "//item.jd.com/3857525.html",
-                    price: "1299"
-                },
-                {
-                    key: "2",
-                    title: "360手机 N5 全网通 6GB+32GB 流光金 移动联通电信4G手机 双卡双待",
-                    img: "//img10.360buyimg.com/n7/jfs/t3127/302/6759817728/310883/d8845fa8/58ad06d4N48f50019.jpg",
-                    src: "//item.jd.com/3857525.html",
-                    price: "1299"
-                },
-                {
-                    key: "3",
-                    title: "360手机 N5 全网通 6GB+32GB 流光金 移动联通电信4G手机 双卡双待",
-                    img: "//img10.360buyimg.com/n7/jfs/t3127/302/6759817728/310883/d8845fa8/58ad06d4N48f50019.jpg",
-                    src: "//item.jd.com/3857525.html",
-                    price: "1299"
-                },
-                {
-                    key: "4",
-                    title: "360手机 N5 全网通 6GB+32GB 流光金 移动联通电信4G手机 双卡双待",
-                    img: "//img10.360buyimg.com/n7/jfs/t3127/302/6759817728/310883/d8845fa8/58ad06d4N48f50019.jpg",
-                    src: "//item.jd.com/3857525.html",
-                    price: "1299"
-                },
-                {
-                    key: "5",
-                    title: "360手机 N5 全网通 6GB+32GB 流光金 移动联通电信4G手机 双卡双待",
-                    img: "//img10.360buyimg.com/n7/jfs/t3127/302/6759817728/310883/d8845fa8/58ad06d4N48f50019.jpg",
-                    src: "//item.jd.com/3857525.html",
-                    price: "1299"
-                },
-                {
-                    key: "6",
-                    title: "360手机 N5 全网通 6GB+32GB 流光金 移动联通电信4G手机 双卡双待",
-                    img: "//img10.360buyimg.com/n7/jfs/t3127/302/6759817728/310883/d8845fa8/58ad06d4N48f50019.jpg",
-                    src: "//item.jd.com/3857525.html",
-                    price: "1299"
-                },
-            ]
+
         }
     },
     components: {
 
     },
     computed: {
-        tempList: function() {
-            return _.chunk(this.productList, 5)
+        productionList() {
+            return _.chunk(this.$store.state.productionList, 5)
         }
     }
 }
