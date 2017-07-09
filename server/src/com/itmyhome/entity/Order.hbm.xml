@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+     
+<hibernate-mapping package="com.itmyhome.entity">
+	<class name = "Order" table="t_order">
+		<id name = "orderId">
+			<generator class = "native"/>
+		</id>
+		<property name = "orderNo"></property>
+		<property name = "sendName"></property>
+		<property name = "sendAddress"></property>
+		<property name = "sendZip"></property>
+		<property name = "sendTel"></property>
+		<property name = "payment"></property>
+		<property name = "meno"></property>
+		<property name = "time" type="date"></property>
+		<property name = "tag" type="integer"></property>
+		<many-to-one name="user" column="userId"></many-to-one>
+		<many-to-one name="entry" column="entryId"></many-to-one>
+	</class>
+</hibernate-mapping>

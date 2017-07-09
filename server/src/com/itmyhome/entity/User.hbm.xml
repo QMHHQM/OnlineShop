@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+     
+<hibernate-mapping package="com.itmyhome.entity">
+	<class name = "User">
+		<id name = "userId">
+			<generator class = "native"/>
+		</id>
+		<property name = "username"></property>
+		<property name = "password"></property>
+		<property name = "realName"></property>
+		<property name = "tel"></property>
+		<property name = "address"></property>
+		<property name = "zip"></property>
+		<property name = "email"></property>
+		<set name="products" table="user_product">
+			<key column="userId"/>
+			<many-to-many class="Product" column="proId"/>
+		</set>
+		<set name="orders">
+			<key column="userId"/>
+			<one-to-many class="Order"/>
+		</set>
+		<set name="roles">
+		  <key column="userId"/>
+		  <one-to-many class="Role"/>
+		</set>
+	</class>
+</hibernate-mapping>

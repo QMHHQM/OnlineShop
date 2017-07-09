@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+     
+<hibernate-mapping package="com.itmyhome.entity">
+	<class name = "Role">
+		<id name = "roleId">
+			<generator class = "native"/>
+		</id>
+		<property name="name" length="50"/>
+		<property name="descriptions" length="500"/>
+		<many-to-one name="user" column="userId"/>
+		<set name="permissions">
+		   <key column="roleId"/>
+		   <one-to-many class="Permission"/>
+		</set>
+	</class>
+</hibernate-mapping>

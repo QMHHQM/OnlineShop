@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+     
+<hibernate-mapping package="com.itmyhome.entity">
+	<class name = "Admin">
+		<id name = "adminId">
+			<generator class = "native"/>
+		</id>
+		<property name = "adminName"></property>
+		<property name = "password"></property>
+		<property name = "permissions" type="integer"></property>
+		<set name="users">
+			<key column="adminId"></key>
+			<one-to-many class="User"/>
+		</set>
+		<set name="products">
+			<key column="adminId"></key>
+			<one-to-many class="Product"/>
+		</set>
+		<set name="entries">
+			<key column="adminId"></key>
+			<one-to-many class="Entry"/>
+		</set>
+	</class>
+</hibernate-mapping>
