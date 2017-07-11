@@ -105,6 +105,18 @@ const state = {
 				content: "穿上很舒服",
 				avatar: "//misc.360buyimg.com/lib/img/u/b61.gif",
 				time: "2017-04-07 00:14"
+			},
+			{
+				userName: "刘***红 ",
+				content: "穿上很舒服",
+				avatar: "//misc.360buyimg.com/lib/img/u/b61.gif",
+				time: "2017-04-07 00:14"
+			},
+			{
+				userName: "刘***红 ",
+				content: "穿上很舒服",
+				avatar: "//misc.360buyimg.com/lib/img/u/b61.gif",
+				time: "2017-04-07 00:14"
 			}
 		]
     }
