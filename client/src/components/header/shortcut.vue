@@ -6,7 +6,7 @@
                 <li class="spacer"></li>
                 <li class="dt"><router-link to="/home/user-info">个人信息</router-link></li>
                 <li class="spacer"></li>
-                <li class="dt"><a target="_blank" href="#">我的订单</a></li>
+                <li class="dt"><router-link to="/home/order-list">我的订单</router-link></li>
                 <li class="spacer"></li>
                 <li class="dt"><a target="_blank" href="#">退出登录</a></li>
             </ul>

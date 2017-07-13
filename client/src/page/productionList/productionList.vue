@@ -11,7 +11,7 @@
                                 </router-link>
                             </div>
                             <div class="p-name">
-                                <router-link to="/home/production-info" :href="item.src":title="item.title">
+                                <router-link to="/home/production-info" :href="item.src" :title="item.title">
                                     {{ item.title }}
                                 </router-link>
                             </div>

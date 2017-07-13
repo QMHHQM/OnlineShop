@@ -7,16 +7,16 @@
         <buy-cart v-if="isCartOpen"></buy-cart>
         <foot-guide></foot-guide>
 
-    <div class="toolbar-tabs" :class="{'open-toolbar': isCartOpen}">
-        <div class="toolbar-tab tbar-tab-cart" @click="taggleCart" :class="{'z-tbar-tab-selected': isCartOpen}">
-            <i class="fa fa-shopping-cart"></i>
+        <div class="toolbar-tabs" :class="{'open-toolbar': isCartOpen}">
+            <div class="toolbar-tab tbar-tab-cart" @click="taggleCart" :class="{'z-tbar-tab-selected': isCartOpen}">
+                <i class="fa fa-shopping-cart"></i>
+            </div>
+            <div class="toolbar-tab tbar-tab-coupon">
+                <a href="javascript:scroll(0,0)">
+                    <i class="fa fa-angle-double-up"></i>
+                </a>
+            </div>
         </div>
-        <div class="toolbar-tab tbar-tab-coupon">
-            <a href="javascript:scroll(0,0)">
-                <i class="fa fa-angle-double-up"></i>
-            </a>
-        </div>
-    </div>
     </div>
 </template>
 <script>

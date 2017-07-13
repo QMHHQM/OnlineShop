@@ -1,14 +1,14 @@
 <template>
-<div>this is user info page</div>
+    <div>this is user info page</div>
 </template>
 <script>
-export default {
-    data() {
-        return {
+    export default {
+        data() {
+            return {
 
-        }
-    },
-}
+            }
+        },
+    }
 </script>
 <style>
 
