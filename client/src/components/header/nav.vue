@@ -1,7 +1,7 @@
 <template>
     <div class="nav"> 
         <div class="content">
-            <div class="mt"><h3 >商品列表</h3></div>
+            <div class="mt"><h3 >{{ subTitle }}</h3></div>
         </div>
     </div>
 </template>
@@ -12,11 +12,25 @@ export default {
             
         }
     },
-    components: {
-
-    },
     computed: {
-        
+        subTitle() {
+            let path = this.$route.path;
+            let name = "";
+            switch(path) {
+                case "/home/user-info":
+                    name = "个人信息";
+                    break;
+                case "/home/production-info":
+                    name = "商品详情";
+                    break;
+                case "/home/order-list":
+                    name = "订单信息";
+                    break;
+                default:
+                    name = "商品列表";
+            }
+            return name;
+        }
     }
 }
 </script>

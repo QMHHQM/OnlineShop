@@ -39,7 +39,7 @@ export default {
     data() {
         return {
             userId: null,           //用户ID
-            password: null,          //用户密码
+            password: null         //用户密码
         }
     },
     methods: {
@@ -61,7 +61,7 @@ export default {
     },
     computed: {
         loginOnErr: function() {
-            return !userId || !password
+            return !this.userId || !this.password
         }
     }
 }

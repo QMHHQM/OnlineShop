@@ -8,7 +8,7 @@
                 <li class="spacer"></li>
                 <li class="dt"><router-link to="/home/order-list">我的订单</router-link></li>
                 <li class="spacer"></li>
-                <li class="dt"><a target="_blank" href="#">退出登录</a></li>
+                <li class="dt"><router-link to="/login">退出登录</router-link></li>
             </ul>
         </div>
     </div>
