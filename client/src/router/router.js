@@ -24,6 +24,9 @@ export default [
             },
             {
                 path: 'user-info',
+                meta: {
+                    requireAuth: true,
+                },
                 component: userInfo
             },
             {

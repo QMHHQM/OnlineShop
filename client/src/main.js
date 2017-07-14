@@ -11,6 +11,31 @@ const router = new VueRouter({
     mode: 'history'
 })
 
+router.beforeEach((to, from, next) => {
+    if (to.meta.requireAuth) {
+        if(!isEmptyObject(store.state.user)) {   
+             next();
+         }
+        else {
+            next({
+                path: '/login',
+                query: { redirect: to.fullPath }
+            })
+        }
+    }
+    else {
+        next();
+    }
+})
+
+function isEmptyObject(obj) {
+    console.log 
+    for (let key in obj) {
+        return false;
+    }
+    return true;
+}
+
 new Vue({
     el: '#app',
     router,
