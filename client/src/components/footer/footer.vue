@@ -14,21 +14,21 @@
                     </div>
                 </div>
                 <div class="col-md-4 footer-links">
-                    <h4>前端开发组(姓名-学号-github账号)</h4>
+                    <h4>前端开发组(姓名-github账号)</h4>
                     <div class="links">
-                        <a href="#" class="link-item">顾睿-1610122600-grapes4/gurui</a>
-                        <a href="#" class="link-item">王龚龙</a>
-                        <a href="#" class="link-item">陈昱先</a>
-                        <a href="#" class="link-item">王舒洋</a> 
+                        <a href="#" class="link-item">顾睿 - grapes4/gurui</a>
+                        <a href="#" class="link-item">王舒洋 - WangDuDu</a>
+                        <a href="#" class="link-item">王宁 - iqshen</a>
+                        <a href="#" class="link-item">王龚龙 - Never_Later</a>
                     </div>
                 </div>
                 <div class="col-md-4 footer-links">
-                    <h4>后端开发组(姓名-学号-github账号)</h4>
+                    <h4>后端开发组(姓名-github账号)</h4>
                     <div class="links">
-                        <a href="#" class="link-item">何凡</a>
-                        <a href="#" class="link-item">贾音</a> 
-                        <a href="#" class="link-item">刘超</a>
-                        <a href="#" class="link-item">王宁</a>                        
+                        <a href="#" class="link-item">何凡 - QMHHQM</a>
+                        <a href="#" class="link-item">贾音 - broccolimo</a> 
+                        <a href="#" class="link-item">刘超 - T-M-L-C</a>
+                        <a href="#" class="link-item">陈昱先 - chenyuxian</a>                        
                     </div>
                 </div>
             </div>

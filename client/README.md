@@ -1,18 +1,18 @@
-# online-shop
+# OnlineShop
+---
+## 说明
+- server文件夹为后端代码
+- client文件夹为前端代码
 
-> a simple online shop
+## 开发人员及对应账号
+#### 前端
+- 顾睿 (grapes4、gurui)
+- 王舒洋 (WangDuDu)
+- 王宁 (iqshen)
+- 王龚龙 (Never_Later)
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-```
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+#### 后端
+- 何凡 (QMHHQM)
+- 贾音 (broccolimo)
+- 刘超 (T-M-L-C)
+- 陈昱先 (chenyuxian)
