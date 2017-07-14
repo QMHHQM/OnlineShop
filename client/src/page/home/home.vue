@@ -80,7 +80,7 @@ export default {
         right: 270px;
     }
     .z-tbar-tab-selected{
-        background-color: #c81623;
+        background-color: #003664;
     }
     .toolbar-tab i {
         font-size: 24px;

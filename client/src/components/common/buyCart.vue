@@ -168,7 +168,7 @@ export default {
     line-height: 20px;
 }
 .tbar-tipbox2 .tip-text a {
-    color: #c81623;
+    color: #003664;
 }
 .tbar-cart-list {
     width: 100%;
@@ -212,7 +212,7 @@ export default {
     color: #666;
 }
 .jtc-item-goods .p-price strong {
-    color: #c81623;
+    color: #003664;
     font-weight: 400;
 }
 .jtc-item-goods .p-del {
@@ -253,14 +253,14 @@ export default {
 }
 .tbar-checkout .jtc-number strong {
     font-family: verdana;
-    color: #c81623;
+    color: #003664;
 }
 .tbar-checkout .jtc-sum {
     line-height: 20px;
 }
 .tbar-checkout .jtc-sum strong {
     font-family: verdana;
-    color: #c81623;
+    color: #003664;
 }
 .tbar-checkout .jtc-btn {
     position: absolute;
@@ -271,7 +271,7 @@ export default {
     text-align: center;
     color: rgb(255, 255, 255);
     font: 16px/35px 微软雅黑;
-    background: rgb(200, 22, 35);
+    background-color: #003664;
 }
 .toolbar-wrap a {
     text-decoration: none;

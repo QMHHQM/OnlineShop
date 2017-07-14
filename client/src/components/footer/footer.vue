@@ -10,7 +10,7 @@
                         <div class="copyright">Copyright
                             <span style="margin:0 3px">©</span>
                             {{thisYear}}
-                            <a href="#" target="_blank">AlloyTeam</a>. All Rights Reserved.</div>
+                            <a href="#" target="_blank">Great Team</a>. All Rights Reserved.</div>
                     </div>
                 </div>
                 <div class="col-md-4 footer-links">

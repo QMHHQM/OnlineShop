@@ -3,21 +3,7 @@
         <div class="sns-tab tab-app">
             <ul>
                 <li class="selected">
-                    <a href="base_info_set.htm">
-                        <span>个人资料</span>
-                    </a>
-                </li>
-            </ul>
-            <ul class="tab-sub">
-                <li class="selected">
-                    <a href="base_info_set.htm">
-                        <span>基本资料</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="headset.htm?tracelog=Photo011">
-                        <span>头像照片</span>
-                    </a>
+                    <span>个人资料</span>
                 </li>
             </ul>
         </div>
@@ -25,14 +11,8 @@
             <div class="bd">
                 <div class="sns-nf">
                     <div class="tips-box">亲爱的
-                        <b>g******6</b>，填写真实的资料，有助于好友找到你哦。</div>
+                        <b>何凡</b>，填写真实的资料，有助于好友找到你哦。</div>
                     <form id="baseInfoForm" name="baseInfoForm" method="post" class="infoForm">
-                        <input name="_tb_token_" type="hidden" value="sjxnOIWRtdU7rFQjZUR2">
-                        <input type="hidden" name="action" value="user/baseInfoSetAction">
-                        <input type="hidden" name="event_submit_do_save_or_update_base_info_setting" value="1">
-                        <input type="hidden" name="redirectURL" value="">
-                        <input type="hidden" id="J_occupation_view" value="">
-                        <input type="hidden" id="J_home_url" value="$itaobaoServer.setTarget('json/school_json.htm')">
                         <div id="main-profile" class="parts">
                             <p>
                                 <label>当前头像：</label>
@@ -40,7 +20,6 @@
                                     <a class="pf-avatar">
                                         <img src="//wwc.alicdn.com/avatar/getAvatar.do?userId=1020386848&amp;width=80&amp;height=80&amp;type=sns">
                                     </a>
-                                    <a href="//i.taobao.com/user/headset.htm" class="pf-edit-avatar" style="display: none;">编辑头像</a>
                                 </span>
                             </p>
                             <p>
@@ -247,12 +226,8 @@
                                     <option value="990000">海外</option>
                                 </select>
                                 <select name="_fm.b._0.c" id="J_redstar_city"></select>
-                                <select name="_fm.b._0.a" id="J_redstar_area"></select>
-                                <input id="divisionCode" value="" type="hidden" name="_fm.b._0.di">
+                                <select name="_fm.b._0.a" id="J_redstar_area"></select>                            
                             </p>
-                            <div class="sns-msg" id="J_redstarTip" style="display:none;">
-                                <p class="error">居住地所在的省市区为必填项！</p>
-                            </div>
                             <p>
                                 <label>家乡：</label>
                                 <select id="J_live_province" name="_fm.b._0.ho">
@@ -295,15 +270,11 @@
                                 </select>
                                 <select id="J_live_city" name="_fm.b._0.hom"></select>
                                 <select id="J_live_area" name="_fm.b._0.home"></select>
-                                <input type="hidden" name="_fm.b._0.l" value="" id="liveDivisionCode">
                             </p>
                         </div>
                         <div class="act skin-blue">
                             <span class="btn n-btn">
                                 <button type="submit" id="J_saveProfile">保存</button>
-                                <div style="width:1px; height:1px; overflow:hidden; ">
-                                    <input type="submit">
-                                </div>
                             </span>
                         </div>
                     </form>
@@ -325,5 +296,177 @@
     .sns-config {
         width: 1210px;
         margin: 0 auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .sns-tab {
+        position: relative;
+        z-index: 1;
+        margin-top: 10px;
+    }
+    .tab-app ul {
+        margin-bottom: -1px;
+    }
+    .sns-tab ul {
+        position: relative;
+        z-index: 10;
+        overflow: hidden
+    }
+    .tab-app ul li {
+        margin-bottom: -1px;
+    }
+    .sns-tab ul li {
+        float: left;
+        position: relative;
+        z-index: 10;
+    }
+    .tab-app li.selected {
+        border: 1px solid #DCDCDC;
+        border-bottom: 0;
+        background-color: #fff;
+        padding: 0 5px;
+    }
+    .tab-app li.selected span {
+        height: 24px;
+        line-height: 23px;
+        color: #333;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    .sns-tab ul.tab-sub {
+        border-top: 1px solid #dcdcdc;
+        z-index: 1;
+    }
+    .sns-tab ul.tab-sub, .tab-sub ul {
+        border-bottom: 1px solid #D1D1D1;
+        padding: 5px 10px 4px;
+        background-color: #fff;
+    }
+    .sns-config .sns-tab ul.tab-sub {
+        border-left: 1px solid #DCDCDC;
+        border-right: 1px solid #DCDCDC;
+    }
+    .mytaobao-v2 .box-detail .bd {
+        min-height: 390px;
+    }
+    .box-detail .bd {
+        border-top: 0;
+    }
+    .sns-box .bd {
+        border: 1px solid #dcdcdc;
+        padding: 10px;
+        background-color: #fff;
+        position: relative;
+        zoom: 1;
+    }
+    .sns-config .sns-box .sns-nf, .sns-nf {
+        width: 720px;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+    .sns-config .bd .tips-box {
+        font-size: 15px;
+        margin: 10px 0;
+    }
+    .sns-config .parts {
+        border-bottom: 1px solid #dfdfdf;
+        padding: 10px 0;
+        margin-bottom: 10px;
+        zoom: 1;
+    }
+    .sns-config .sns-nf p {
+        line-height: 25px;
+        position: relative;
+        padding-left: 6em;
+    }
+    .sns-nf p {
+        min-height: 25px;
+        margin-bottom: 10px;
+    }
+    .sns-config .sns-nf label {
+        position: absolute;
+        vertical-align: middle;
+        left: 0;
+        height: 26px;
+        line-height: 26px;
+        display: block;
+    }
+    .sns-nf .label, .sns-nf label {
+        width: 6em;
+        color: #333;
+    }
+    .infoForm .pf-avatar-box {
+        display: inline-block;
+        position: relative;
+        border: 3px solid #e6e6e6;
+        width: 80px;
+        height: 80px;
+    }
+    .infoForm .pf-avatar-box .pf-avatar {
+        display: table-cell;
+        width: 80px;
+        height: 80px;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .infoForm .pf-avatar-box .pf-avatar img {
+        vertical-align: middle;
+    }
+    .input-1, .sns-nf .f-checkcode, .sns-nf .f-txt, .sns-nf textarea {
+        padding: 5px;
+        border: 1px solid #cecece;
+        width: 320px;
+        background: url(//assets.alicdn.com/app/sns/img/input_bg.png) no-repeat 0 0;
+    }
+    #J_uniqueName {
+        width: 136px;
+    }
+    .sns-config .sns-nf label em {
+        color: #999;
+        position: absolute;
+        left: -12px;
+        top: 4px;
+    }
+    .sns-config .sns-nf label.except {
+        width: auto;
+        margin-right: 10px;
+        position: static;
+        display: inline;
+    }
+    .sns-config .sns-nf p select {
+        font-size: 13px;
+        color: #666;
+        border-color: rgb(169, 169, 169);
+        border: 1px solid;
+    }
+    .sns-config .sns-nf sub {
+        margin-bottom: 0;
+        font-size: 12px;
+        bottom: 0;
+    }
+    .sns-nf p sub {
+        font-style: normal;
+        color: #989898;
+        margin-left: 1em;
+        position: relative;
+    }
+    .sns-config .sns-nf .act {
+        padding: 0;
+    }
+    .sns-config .act .btn {
+        margin-left: 6em;
+    }
+    .skin-blue .btn {
+        background-position: 0 -53px;
+    }
+    .btn a, .btn button {
+        display: block;
+        color: #fff;
+        padding: 0 11px;
+        background-position: 100% -320px;
+        border: 0;
+        cursor: pointer;
+        line-height: 22px;
+        background-color: #FFAC00;
     }
 </style>

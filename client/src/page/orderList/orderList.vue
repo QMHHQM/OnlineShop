@@ -204,7 +204,7 @@
         text-decoration: none;
     }
     a:hover {
-        color: #C81623;
+        color: #003664;
     }
     .mod-main .mt .extra-l li a {
         display: inline-block;
@@ -213,12 +213,12 @@
         text-decoration: none;
     }
     .mod-main .mt .extra-l li a:hover, .mod-main .mt .extra-l li a:hover em {
-        color: #e4393c;
+        color: #003664;
     }
     .mod-main .mt .extra-l li a.curr {
         padding-bottom: 0;
-        color: #e4393c;
-        border-bottom: 2px solid #e4393c;
+        color: #003664;
+        border-bottom: 2px solid #003664;
         font-weight: 700;
         cursor: pointer;
         text-decoration: none;
@@ -417,7 +417,7 @@
         line-height: 22px;
     }
     .order-tb .status .bean-tips, .order-tb .status a:hover {
-        color: #e4393c;
+        color: #003664;
     }
     .order-tb .sep-row {
         height: 20px;
