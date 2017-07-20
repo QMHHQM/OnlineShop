@@ -15,4 +15,3 @@
 ---
 ## 其他说明
 - 后端代码在server文件夹中，前端代码在client文件夹中
-- 静态页面在client文件夹中的index.html 和 /dist
